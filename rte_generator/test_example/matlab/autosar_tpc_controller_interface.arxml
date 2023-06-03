@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model autosar_tpc_controller
+Model version                : 6.0
+Simulink Coder version       : Simulink Coder 9.8 (R2022b) 13-May-2022
+XML source code generated on : Fri Nov 25 16:33:57 2022
+Model Checksum               : 4112171615 2925350400 4216573822 2159408757
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>TPC_Composition</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>Interfaces</SHORT-NAME>
+                    <ELEMENTS>
+                        <SENDER-RECEIVER-INTERFACE UUID="97320dc0-577c-510c-4f1f-3dac1e4147a3">
+                            <SHORT-NAME>TPS_Percent</SHORT-NAME>
+                            <IS-SERVICE>false</IS-SERVICE>
+                            <DATA-ELEMENTS>
+                                <VARIABLE-DATA-PROTOTYPE UUID="5b9c3a69-b02b-5dc9-031d-d1a5d0ff2018">
+                                    <SHORT-NAME>Value</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/Float</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                            </DATA-ELEMENTS>
+                        </SENDER-RECEIVER-INTERFACE>
+                        <SENDER-RECEIVER-INTERFACE UUID="7682eb42-a2e2-56dd-12f0-40606c4687c5">
+                            <SHORT-NAME>APP_Percent</SHORT-NAME>
+                            <IS-SERVICE>false</IS-SERVICE>
+                            <DATA-ELEMENTS>
+                                <VARIABLE-DATA-PROTOTYPE UUID="e3a69e53-1ff5-54d9-2c3c-01cd918b2279">
+                                    <SHORT-NAME>Value</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/Float</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                            </DATA-ELEMENTS>
+                        </SENDER-RECEIVER-INTERFACE>
+                        <SENDER-RECEIVER-INTERFACE UUID="965e8a60-2855-592b-0f63-c563297dbf65">
+                            <SHORT-NAME>ThrCmd_Percent</SHORT-NAME>
+                            <IS-SERVICE>false</IS-SERVICE>
+                            <DATA-ELEMENTS>
+                                <VARIABLE-DATA-PROTOTYPE UUID="b7899f6f-96bb-5803-a22f-c0f3491fb060">
+                                    <SHORT-NAME>Value</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/Float</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                            </DATA-ELEMENTS>
+                        </SENDER-RECEIVER-INTERFACE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model autosar_tpc_actuator
+Model version                : 6.0
+Simulink Coder version       : Simulink Coder 9.8 (R2022b) 13-May-2022
+XML source code generated on : Fri Nov 25 16:33:46 2022
+Model Checksum               : 294797025 2252284234 3727976417 3885705006
+-->
+<!--./test_example/matlab/autosar_tpc_actuator_datatype.arxml-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>TPC_Composition</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>DataTypes</SHORT-NAME>
+                    <ELEMENTS>
+                        <IMPLEMENTATION-DATA-TYPE UUID="934b8518-900a-5d7e-08bd-5c74d5fb45a8">
+                            <SHORT-NAME>Float</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/TPC_Composition/DataTypes/SwBaseTypes/float32</BASE-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE UUID="fabd5a8e-ec20-5199-7b54-36b87b6b823b">
+                            <SHORT-NAME>SInt16</SHORT-NAME>
+                            <CATEGORY>VALUE</CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <BASE-TYPE-REF DEST="SW-BASE-TYPE">/TPC_Composition/DataTypes/SwBaseTypes/sint16</BASE-TYPE-REF>
+                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE UUID="5b0cbea5-23af-5a8b-9e72-f325f1d28251">
+                            <SHORT-NAME>MyStruct_Actuator</SHORT-NAME>
+                            <CATEGORY>STRUCTURE</CATEGORY>
+                            <SUB-ELEMENTS>
+                                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="7f0b87a1-64a4-5513-79a4-c94bf83fa752">
+                                    <SHORT-NAME>BP1</SHORT-NAME>
+                                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/rt_Array_Float_21</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="a99128b4-3a01-590d-4ee0-00a0816a0848">
+                                    <SHORT-NAME>Table</SHORT-NAME>
+                                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/rt_Array_SInt16_21</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                            </SUB-ELEMENTS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE UUID="3db5ad46-a3a4-5dcb-fee7-f44f996bc52d">
+                            <SHORT-NAME>rt_Array_Float_21</SHORT-NAME>
+                            <CATEGORY>ARRAY</CATEGORY>
+                            <SUB-ELEMENTS>
+                                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="14efb9af-bcda-5627-b534-f315b1135d03">
+                                    <SHORT-NAME>rt_Array_Float_21</SHORT-NAME>
+                                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                    <ARRAY-SIZE>21</ARRAY-SIZE>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/Float</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                            </SUB-ELEMENTS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                        <IMPLEMENTATION-DATA-TYPE UUID="45c0c542-58e8-5c43-163c-f305c8e7a379">
+                            <SHORT-NAME>rt_Array_SInt16_21</SHORT-NAME>
+                            <CATEGORY>ARRAY</CATEGORY>
+                            <SUB-ELEMENTS>
+                                <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="a7c64730-df70-57c1-72bf-b21fb64c8b07">
+                                    <SHORT-NAME>rt_Array_SInt16_21</SHORT-NAME>
+                                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                    <ARRAY-SIZE>21</ARRAY-SIZE>
+                                    <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/SInt16</IMPLEMENTATION-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                            </SUB-ELEMENTS>
+                        </IMPLEMENTATION-DATA-TYPE>
+                    </ELEMENTS>
+                    <AR-PACKAGES>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>ApplDataTypes</SHORT-NAME>
+                            <ELEMENTS>
+                                <APPLICATION-PRIMITIVE-DATA-TYPE UUID="e445d8fe-b47d-51c7-625e-46a4c04d18ca">
+                                    <SHORT-NAME>Appl_HBridgeCmd_LkupTbl</SHORT-NAME>
+                                    <CATEGORY>CURVE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                <SW-CALPRM-AXIS-SET>
+                                                    <SW-CALPRM-AXIS>
+                                                        <SW-AXIS-INDEX>1</SW-AXIS-INDEX>
+                                                        <CATEGORY>STD_AXIS</CATEGORY>
+                                                        <SW-AXIS-INDIVIDUAL>
+                                                            <INPUT-VARIABLE-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/TPC_Composition/DataTypes/ApplDataTypes/Float</INPUT-VARIABLE-TYPE-REF>
+                                                            <COMPU-METHOD-REF DEST="COMPU-METHOD">/TPC_Composition/DataTypes/CompuMethods/Identcl</COMPU-METHOD-REF>
+                                                            <SW-MAX-AXIS-POINTS>21</SW-MAX-AXIS-POINTS>
+                                                            <SW-MIN-AXIS-POINTS>21</SW-MIN-AXIS-POINTS>
+                                                            <DATA-CONSTR-REF DEST="DATA-CONSTR">/TPC_Composition/DataTypes/ApplDataTypes/DataConstrs/DC_Float</DATA-CONSTR-REF>
+                                                        </SW-AXIS-INDIVIDUAL>
+                                                    </SW-CALPRM-AXIS>
+                                                </SW-CALPRM-AXIS-SET>
+                                                <COMPU-METHOD-REF DEST="COMPU-METHOD">/TPC_Composition/DataTypes/CompuMethods/Identcl</COMPU-METHOD-REF>
+                                                <DATA-CONSTR-REF DEST="DATA-CONSTR">/TPC_Composition/DataTypes/ApplDataTypes/DataConstrs/DC_SInt16</DATA-CONSTR-REF>
+                                                <SW-RECORD-LAYOUT-REF DEST="SW-RECORD-LAYOUT">/TPC_Composition/DataTypes/SwRecordLayouts/IntCur_f32_s16_M</SW-RECORD-LAYOUT-REF>
+                                                <VALUE-AXIS-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/TPC_Composition/DataTypes/ApplDataTypes/SInt16</VALUE-AXIS-DATA-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </APPLICATION-PRIMITIVE-DATA-TYPE>
+                                <APPLICATION-PRIMITIVE-DATA-TYPE UUID="8e4eccc4-6970-50fb-6a47-aac850c4c9fd">
+                                    <SHORT-NAME>SInt16</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                <COMPU-METHOD-REF DEST="COMPU-METHOD">/TPC_Composition/DataTypes/CompuMethods/Identcl</COMPU-METHOD-REF>
+                                                <DATA-CONSTR-REF DEST="DATA-CONSTR">/TPC_Composition/DataTypes/ApplDataTypes/DataConstrs/DC_SInt16</DATA-CONSTR-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </APPLICATION-PRIMITIVE-DATA-TYPE>
+                                <APPLICATION-PRIMITIVE-DATA-TYPE UUID="fe00d311-eaf5-5de0-9c5f-b2b2f68c36a2">
+                                    <SHORT-NAME>Float</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                <COMPU-METHOD-REF DEST="COMPU-METHOD">/TPC_Composition/DataTypes/CompuMethods/Identcl</COMPU-METHOD-REF>
+                                                <DATA-CONSTR-REF DEST="DATA-CONSTR">/TPC_Composition/DataTypes/ApplDataTypes/DataConstrs/DC_Float</DATA-CONSTR-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </APPLICATION-PRIMITIVE-DATA-TYPE>
+                            </ELEMENTS>
+                            <AR-PACKAGES>
+                                <AR-PACKAGE>
+                                    <SHORT-NAME>DataConstrs</SHORT-NAME>
+                                    <ELEMENTS>
+                                        <DATA-CONSTR UUID="56e64392-f8ae-5aa0-96c9-029843a1587f">
+                                            <SHORT-NAME>DC_SInt16</SHORT-NAME>
+                                            <DATA-CONSTR-RULES>
+                                                <DATA-CONSTR-RULE>
+                                                    <PHYS-CONSTRS>
+                                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                                                        <UNIT-REF DEST="UNIT">/TPC_Composition/DataTypes/Units/NoUnit</UNIT-REF>
+                                                    </PHYS-CONSTRS>
+                                                </DATA-CONSTR-RULE>
+                                            </DATA-CONSTR-RULES>
+                                        </DATA-CONSTR>
+                                        <DATA-CONSTR UUID="d39cda3b-4ac8-5b74-f91a-5b452566f9fd">
+                                            <SHORT-NAME>DC_Float</SHORT-NAME>
+                                            <DATA-CONSTR-RULES>
+                                                <DATA-CONSTR-RULE>
+                                                    <PHYS-CONSTRS>
+                                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-INF</LOWER-LIMIT>
+                                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">INF</UPPER-LIMIT>
+                                                        <UNIT-REF DEST="UNIT">/TPC_Composition/DataTypes/Units/NoUnit</UNIT-REF>
+                                                    </PHYS-CONSTRS>
+                                                </DATA-CONSTR-RULE>
+                                            </DATA-CONSTR-RULES>
+                                        </DATA-CONSTR>
+                                    </ELEMENTS>
+                                </AR-PACKAGE>
+                            </AR-PACKAGES>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>CompuMethods</SHORT-NAME>
+                            <ELEMENTS>
+                                <COMPU-METHOD UUID="11f992a5-5340-5cf2-b015-b6a5b538f98d">
+                                    <SHORT-NAME>Identcl</SHORT-NAME>
+                                    <CATEGORY>IDENTICAL</CATEGORY>
+                                    <UNIT-REF DEST="UNIT">/TPC_Composition/DataTypes/Units/NoUnit</UNIT-REF>
+                                </COMPU-METHOD>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>Constants</SHORT-NAME>
+                            <ELEMENTS>
+                                <CONSTANT-SPECIFICATION UUID="dcedd95e-2a09-5ac0-09df-37ded70f39e9">
+                                    <SHORT-NAME>HBridgeCmd_LkupTbl</SHORT-NAME>
+                                    <VALUE-SPEC>
+                                        <APPLICATION-VALUE-SPECIFICATION>
+                                            <SHORT-LABEL>HBridgeCmd_LkupTbl</SHORT-LABEL>
+                                            <CATEGORY>CURVE</CATEGORY>
+                                            <SW-AXIS-CONTS>
+                                                <SW-AXIS-CONT>
+                                                    <CATEGORY>STD_AXIS</CATEGORY>
+                                                    <UNIT-REF DEST="UNIT">/TPC_Composition/DataTypes/Units/NoUnit</UNIT-REF>
+                                                    <SW-AXIS-INDEX>1</SW-AXIS-INDEX>
+                                                    <SW-ARRAYSIZE>
+                                                        <V>21</V>
+                                                    </SW-ARRAYSIZE>
+                                                    <SW-VALUES-PHYS>
+                                                        <V>-100</V>
+                                                        <V>-90</V>
+                                                        <V>-80</V>
+                                                        <V>-70</V>
+                                                        <V>-60</V>
+                                                        <V>-50</V>
+                                                        <V>-40</V>
+                                                        <V>-30</V>
+                                                        <V>-20</V>
+                                                        <V>-10</V>
+                                                        <V>0</V>
+                                                        <V>10</V>
+                                                        <V>20</V>
+                                                        <V>30</V>
+                                                        <V>40</V>
+                                                        <V>50</V>
+                                                        <V>60</V>
+                                                        <V>70</V>
+                                                        <V>80</V>
+                                                        <V>90</V>
+                                                        <V>100</V>
+                                                    </SW-VALUES-PHYS>
+                                                </SW-AXIS-CONT>
+                                            </SW-AXIS-CONTS>
+                                            <SW-VALUE-CONT>
+                                                <UNIT-REF DEST="UNIT">/TPC_Composition/DataTypes/Units/NoUnit</UNIT-REF>
+                                                <SW-ARRAYSIZE>
+                                                    <V>21</V>
+                                                </SW-ARRAYSIZE>
+                                                <SW-VALUES-PHYS>
+                                                    <V>-2048</V>
+                                                    <V>-1843</V>
+                                                    <V>-1638</V>
+                                                    <V>-1434</V>
+                                                    <V>-1229</V>
+                                                    <V>-1024</V>
+                                                    <V>-819</V>
+                                                    <V>-614</V>
+                                                    <V>-410</V>
+                                                    <V>-205</V>
+                                                    <V>0</V>
+                                                    <V>205</V>
+                                                    <V>410</V>
+                                                    <V>614</V>
+                                                    <V>819</V>
+                                                    <V>1024</V>
+                                                    <V>1229</V>
+                                                    <V>1434</V>
+                                                    <V>1638</V>
+                                                    <V>1843</V>
+                                                    <V>2048</V>
+                                                </SW-VALUES-PHYS>
+                                            </SW-VALUE-CONT>
+                                        </APPLICATION-VALUE-SPECIFICATION>
+                                    </VALUE-SPEC>
+                                </CONSTANT-SPECIFICATION>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>DataTypeMappings</SHORT-NAME>
+                            <ELEMENTS>
+                                <DATA-TYPE-MAPPING-SET UUID="9b517860-6f51-5fe9-9b1c-8b848478b2f9">
+                                    <SHORT-NAME>ActuatorDataTypeMappingsSet</SHORT-NAME>
+                                    <DATA-TYPE-MAPS>
+                                        <DATA-TYPE-MAP>
+                                            <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/TPC_Composition/DataTypes/ApplDataTypes/Appl_HBridgeCmd_LkupTbl</APPLICATION-DATA-TYPE-REF>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/MyStruct_Actuator</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </DATA-TYPE-MAP>
+                                        <DATA-TYPE-MAP>
+                                            <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/TPC_Composition/DataTypes/ApplDataTypes/SInt16</APPLICATION-DATA-TYPE-REF>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/SInt16</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </DATA-TYPE-MAP>
+                                        <DATA-TYPE-MAP>
+                                            <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/TPC_Composition/DataTypes/ApplDataTypes/Float</APPLICATION-DATA-TYPE-REF>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/TPC_Composition/DataTypes/Float</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </DATA-TYPE-MAP>
+                                    </DATA-TYPE-MAPS>
+                                </DATA-TYPE-MAPPING-SET>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+                            <ELEMENTS>
+                                <SW-ADDR-METHOD UUID="72181573-9644-5133-2cac-14a0c6892d55">
+                                    <SHORT-NAME>CODE</SHORT-NAME>
+                                    <SECTION-TYPE>CODE</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                                <SW-ADDR-METHOD UUID="fb6ad3f1-1369-5831-c44a-ba5bc2a6dd24">
+                                    <SHORT-NAME>CONST</SHORT-NAME>
+                                    <SECTION-TYPE>CONST</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                                <SW-ADDR-METHOD UUID="b4daec1f-5b57-5cda-dd21-0b1f7b280c35">
+                                    <SHORT-NAME>VAR</SHORT-NAME>
+                                    <SECTION-TYPE>VAR</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>SwBaseTypes</SHORT-NAME>
+                            <ELEMENTS>
+                                <SW-BASE-TYPE UUID="b2212d6b-9f16-532d-4bc4-03a923401996">
+                                    <SHORT-NAME>float32</SHORT-NAME>
+                                    <CATEGORY>FIXED_LENGTH</CATEGORY>
+                                    <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+                                    <BASE-TYPE-ENCODING>IEEE754</BASE-TYPE-ENCODING>
+                                    <NATIVE-DECLARATION>float32</NATIVE-DECLARATION>
+                                </SW-BASE-TYPE>
+                                <SW-BASE-TYPE UUID="eea8e533-6666-5bd1-ae1d-6700f158cba6">
+                                    <SHORT-NAME>sint16</SHORT-NAME>
+                                    <CATEGORY>FIXED_LENGTH</CATEGORY>
+                                    <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+                                    <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
+                                    <NATIVE-DECLARATION>sint16</NATIVE-DECLARATION>
+                                </SW-BASE-TYPE>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>SwRecordLayouts</SHORT-NAME>
+                            <ELEMENTS>
+                                <SW-RECORD-LAYOUT UUID="d530f77e-0f30-5b5d-ca6e-36900f59a691">
+                                    <SHORT-NAME>IntCur_f32_s16</SHORT-NAME>
+                                </SW-RECORD-LAYOUT>
+                                <SW-RECORD-LAYOUT UUID="e2473ccf-dd8b-543a-ced7-9d62a058cf96">
+                                    <SHORT-NAME>IntCur_f32_s16_M</SHORT-NAME>
+                                    <SW-RECORD-LAYOUT-GROUP>
+                                        <SHORT-LABEL>IntCur_f32_s16_M</SHORT-LABEL>
+                                        <SW-RECORD-LAYOUT-GROUP>
+                                            <SHORT-LABEL>X</SHORT-LABEL>
+                                            <CATEGORY>INDEX_INCR</CATEGORY>
+                                            <SW-RECORD-LAYOUT-GROUP-AXIS>1</SW-RECORD-LAYOUT-GROUP-AXIS>
+                                            <SW-RECORD-LAYOUT-GROUP-INDEX>X</SW-RECORD-LAYOUT-GROUP-INDEX>
+                                            <SW-RECORD-LAYOUT-GROUP-FROM>1</SW-RECORD-LAYOUT-GROUP-FROM>
+                                            <SW-RECORD-LAYOUT-GROUP-TO>-1</SW-RECORD-LAYOUT-GROUP-TO>
+                                            <SW-RECORD-LAYOUT-V>
+                                                <SHORT-LABEL>VALUE</SHORT-LABEL>
+                                                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/TPC_Composition/DataTypes/SwBaseTypes/float32</BASE-TYPE-REF>
+                                                <SW-RECORD-LAYOUT-V-AXIS>1</SW-RECORD-LAYOUT-V-AXIS>
+                                                <SW-RECORD-LAYOUT-V-PROP>VALUE</SW-RECORD-LAYOUT-V-PROP>
+                                            </SW-RECORD-LAYOUT-V>
+                                        </SW-RECORD-LAYOUT-GROUP>
+                                        <SW-RECORD-LAYOUT-GROUP>
+                                            <SHORT-LABEL>Val</SHORT-LABEL>
+                                            <CATEGORY>COLUMN_DIR</CATEGORY>
+                                            <SW-RECORD-LAYOUT-GROUP-AXIS>1</SW-RECORD-LAYOUT-GROUP-AXIS>
+                                            <SW-RECORD-LAYOUT-GROUP-INDEX>X</SW-RECORD-LAYOUT-GROUP-INDEX>
+                                            <SW-RECORD-LAYOUT-GROUP-FROM>1</SW-RECORD-LAYOUT-GROUP-FROM>
+                                            <SW-RECORD-LAYOUT-GROUP-TO>-1</SW-RECORD-LAYOUT-GROUP-TO>
+                                            <SW-RECORD-LAYOUT-V>
+                                                <SHORT-LABEL>Val</SHORT-LABEL>
+                                                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/TPC_Composition/DataTypes/SwBaseTypes/sint16</BASE-TYPE-REF>
+                                                <SW-RECORD-LAYOUT-V-AXIS>0</SW-RECORD-LAYOUT-V-AXIS>
+                                                <SW-RECORD-LAYOUT-V-PROP>VALUE</SW-RECORD-LAYOUT-V-PROP>
+                                                <SW-RECORD-LAYOUT-V-INDEX>X</SW-RECORD-LAYOUT-V-INDEX>
+                                            </SW-RECORD-LAYOUT-V>
+                                        </SW-RECORD-LAYOUT-GROUP>
+                                    </SW-RECORD-LAYOUT-GROUP>
+                                </SW-RECORD-LAYOUT>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>Units</SHORT-NAME>
+                            <ELEMENTS>
+                                <UNIT UUID="e4d8f0d7-446d-5820-2d8b-e63764e41750">
+                                    <SHORT-NAME>NoUnit</SHORT-NAME>
+                                    <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+                                    <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+                                </UNIT>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                    </AR-PACKAGES>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

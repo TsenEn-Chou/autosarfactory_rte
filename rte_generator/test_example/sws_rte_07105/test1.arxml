@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--./test_example/sws_rte_07105/test1.arxml-->
+<!-- 有兩個 IMPLEMENTATION-DATA-TYPE 的 symbol 都為 TYP_ExchangedData_float64-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ControlSWC_Datatypes</SHORT-NAME>
+      <ELEMENTS/>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BaseTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>uint8</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-DEFINITION>
+                <BASE-TYPE-DIRECT-DEFINITION>
+                  <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                  <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                  <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
+                </BASE-TYPE-DIRECT-DEFINITION>
+              </BASE-TYPE-DEFINITION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>Float64</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-DEFINITION>
+                <BASE-TYPE-DIRECT-DEFINITION>
+                  <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
+                  <BASE-TYPE-ENCODING>IEEE754</BASE-TYPE-ENCODING>
+                  <NATIVE-DECLARATION>float64</NATIVE-DECLARATION>
+                </BASE-TYPE-DIRECT-DEFINITION>
+              </BASE-TYPE-DEFINITION>
+            </SW-BASE-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>TYP_ExchangedData_uint8</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <TYPE-EMITTER>RTE</TYPE-EMITTER>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ControlSWC_Datatypes/BaseTypes/uint8</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>TYP_ExchangedData_float64</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <TYPE-EMITTER></TYPE-EMITTER>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ControlSWC_Datatypes/BaseTypes/Float64</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>float64</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <TYPE-EMITTER></TYPE-EMITTER>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ControlSWC_Datatypes/BaseTypes/Float64</BASE-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <SYMBOL-PROPS>
+                <SHORT-NAME>TYP_ExchangedData_float64_symbol</SHORT-NAME>
+                <SYMBOL>TYP_ExchangedData_float64</SYMBOL>
+              </SYMBOL-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

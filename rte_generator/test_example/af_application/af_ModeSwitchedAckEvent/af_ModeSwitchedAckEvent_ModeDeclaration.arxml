@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>af_EvMsa_ModeDeclaration</SHORT-NAME>
+      <ELEMENTS>
+        <MODE-DECLARATION-GROUP>
+          <SHORT-NAME>ECUMMode</SHORT-NAME>
+          <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+          <MODE-DECLARATIONS>
+            <MODE-DECLARATION>
+              <SHORT-NAME>STARTUP_SHUTDOWN</SHORT-NAME>
+              <VALUE>100</VALUE>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION>
+              <SHORT-NAME>RUN</SHORT-NAME>
+              <VALUE>101</VALUE>
+            </MODE-DECLARATION>
+            <MODE-DECLARATION>
+              <SHORT-NAME>SLEEP</SHORT-NAME>
+              <VALUE>1000</VALUE>
+            </MODE-DECLARATION>
+          </MODE-DECLARATIONS>
+          <INITIAL-MODE-REF DEST="MODE-DECLARATION">/af_EvMsa_ModeDeclaration/ECUMMode/STARTUP_SHUTDOWN</INITIAL-MODE-REF>
+          <ON-TRANSITION-VALUE>666</ON-TRANSITION-VALUE>
+        </MODE-DECLARATION-GROUP>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

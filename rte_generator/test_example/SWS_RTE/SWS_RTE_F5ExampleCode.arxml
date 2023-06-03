@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+        <ADMIN-DATA>
+                <LANGUAGE>EN</LANGUAGE>
+                <DOC-REVISIONS>
+                        <DOC-REVISION>
+                                <REVISION-LABEL>0.1.0</REVISION-LABEL>
+                                <DATE>2014-07-31</DATE>
+                        </DOC-REVISION>
+                </DOC-REVISIONS>
+        </ADMIN-DATA>
+        <AR-PACKAGES>
+                <AR-PACKAGE>
+                        <SHORT-NAME>Demo</SHORT-NAME>
+                        <AR-PACKAGES>
+                                <AR-PACKAGE>
+                                        <SHORT-NAME>PortInterfaces</SHORT-NAME>
+                                        <ELEMENTS>
+                                                <PARAMETER-INTERFACE>
+                                                        <SHORT-NAME>EP</SHORT-NAME>
+                                                        <PARAMETERS>
+                                                                <PARAMETER-DATA-PROTOTYPE>
+                                                                        <SHORT-NAME>Prm1</SHORT-NAME>
+                                                                        <SW-DATA-DEF-PROPS>
+                                                                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                                                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CALIB_QM</SW-ADDR-METHOD-REF>
+                                                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                                                        </SW-DATA-DEF-PROPS>
+                                                                        <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/AUTOSAR_AISpecification/ApplicationDataTypes/Flg1</TYPE-TREF>
+                                                                </PARAMETER-DATA-PROTOTYPE>
+                                                        </PARAMETERS>
+                                                </PARAMETER-INTERFACE>
+                                        </ELEMENTS>
+                                </AR-PACKAGE>
+                                <AR-PACKAGE>
+                                        <SHORT-NAME>SwComponentTypes</SHORT-NAME>
+                                        <ELEMENTS>
+                                                <PARAMETER-SW-COMPONENT-TYPE>
+                                                        <SHORT-NAME>PSWC</SHORT-NAME>
+                                                        <PORTS>
+                                                                <P-PORT-PROTOTYPE>
+                                                                        <SHORT-NAME>EP</SHORT-NAME>
+                                                                        <PROVIDED-COM-SPECS>
+                                                                                <PARAMETER-PROVIDE-COM-SPEC>
+                                                                                        <INIT-VALUE>
+                                                                                                <APPLICATION-VALUE-SPECIFICATION>
+                                                                                                        <SW-VALUE-CONT>
+                                                                                                                <UNIT-REF DEST="UNIT">/AUTOSAR/AISpecification/Units/NoUnit</UNIT-REF>
+                                                                                                                <SW-VALUES-PHYS>
+                                                                                                                        <VT>Rst</VT>
+                                                                                                                </SW-VALUES-PHYS>
+                                                                                                        </SW-VALUE-CONT>
+                                                                                                </APPLICATION-VALUE-SPECIFICATION>
+                                                                                        </INIT-VALUE>
+                                                                                        <PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/PortInterfaces/EP/Prm1</PARAMETER-REF>
+                                                                                </PARAMETER-PROVIDE-COM-SPEC>
+                                                                        </PROVIDED-COM-SPECS>
+                                                                        <PROVIDED-INTERFACE-TREF DEST="PARAMETER-INTERFACE">/Demo/PortInterfaces/EP</PROVIDED-INTERFACE-TREF>
+                                                                </P-PORT-PROTOTYPE>
+                                                        </PORTS>
+                                                </PARAMETER-SW-COMPONENT-TYPE>
+                                                <APPLICATION-SW-COMPONENT-TYPE>
+                                                        <SHORT-NAME>ASWC</SHORT-NAME>
+                                                        <PORTS>
+                                                                <R-PORT-PROTOTYPE>
+                                                                        <SHORT-NAME>EP</SHORT-NAME>
+                                                                        <REQUIRED-INTERFACE-TREF DEST="PARAMETER-INTERFACE">/Demo/PortInterfaces/EP</REQUIRED-INTERFACE-TREF>
+                                                                </R-PORT-PROTOTYPE>
+                                                        </PORTS>
+                                                        <INTERNAL-BEHAVIORS>
+                                                                <SWC-INTERNAL-BEHAVIOR>
+                                                                        <SHORT-NAME>ASWC</SHORT-NAME>
+                                                                        <PER-INSTANCE-PARAMETERS>
+                                                                                <PARAMETER-DATA-PROTOTYPE>
+                                                                                        <SHORT-NAME>PIP</SHORT-NAME>
+                                                                                        <SW-DATA-DEF-PROPS>
+                                                                                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                                                                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CALIB_QM</SW-ADDR-METHOD-REF>
+                                                                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                                                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                                                                        </SW-DATA-DEF-PROPS>
+                                                                                        <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/AUTOSAR_AISpecification/ApplicationDataTypes/Flg1</TYPE-TREF>
+                                                                                        <INIT-VALUE>
+                                                                                                <APPLICATION-VALUE-SPECIFICATION>
+                                                                                                        <SW-VALUE-CONT>
+                                                                                                                <UNIT-REF DEST="UNIT">/AUTOSAR/AISpecification/Units/NoUnit</UNIT-REF>
+                                                                                                                <SW-VALUES-PHYS>
+                                                                                                                        <VT>Rst</VT>
+                                                                                                                </SW-VALUES-PHYS>
+                                                                                                        </SW-VALUE-CONT>
+                                                                                                </APPLICATION-VALUE-SPECIFICATION>
+                                                                                        </INIT-VALUE>
+                                                                                </PARAMETER-DATA-PROTOTYPE>
+                                                                        </PER-INSTANCE-PARAMETERS>
+                                                                        <SHARED-PARAMETERS>
+                                                                                <PARAMETER-DATA-PROTOTYPE>
+                                                                                        <SHORT-NAME>SP</SHORT-NAME>
+                                                                                        <SW-DATA-DEF-PROPS>
+                                                                                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                                                                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                                                                <SW-ADDR-METHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CALIB_QM</SW-ADDR-METHOD-REF>
+                                                                                                                <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                                                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                                                                        </SW-DATA-DEF-PROPS>
+                                                                                        <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/AUTOSAR_AISpecification/ApplicationDataTypes/Flg1</TYPE-TREF>
+                                                                                        <INIT-VALUE>
+                                                                                                <APPLICATION-VALUE-SPECIFICATION>
+                                                                                                        <SW-VALUE-CONT>
+                                                                                                                <UNIT-REF DEST="UNIT">/AUTOSAR/AISpecification/Units/NoUnit</UNIT-REF>
+                                                                                                                <SW-VALUES-PHYS>
+                                                                                                                        <VT>Set</VT>
+                                                                                                                </SW-VALUES-PHYS>
+                                                                                                        </SW-VALUE-CONT>
+                                                                                                </APPLICATION-VALUE-SPECIFICATION>
+                                                                                        </INIT-VALUE>
+                                                                                </PARAMETER-DATA-PROTOTYPE>
+                                                                        </SHARED-PARAMETERS>
+                                                                </SWC-INTERNAL-BEHAVIOR>
+                                                        </INTERNAL-BEHAVIORS>
+                                                </APPLICATION-SW-COMPONENT-TYPE>
+                                                <COMPOSITION-SW-COMPONENT-TYPE>
+                                                        <SHORT-NAME>RootComp</SHORT-NAME>
+                                                        <COMPONENTS>
+                                                                <SW-COMPONENT-PROTOTYPE>
+                                                                        <SHORT-NAME>SWC_A</SHORT-NAME>
+                                                                        <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Demo/SwComponentTypes/ASWC</TYPE-TREF>
+                                                                </SW-COMPONENT-PROTOTYPE>
+                                                                <SW-COMPONENT-PROTOTYPE>
+                                                                        <SHORT-NAME>SWC_B</SHORT-NAME>
+                                                                        <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Demo/SwComponentTypes/ASWC</TYPE-TREF>
+                                                                </SW-COMPONENT-PROTOTYPE>
+                                                                <SW-COMPONENT-PROTOTYPE>
+                                                                        <SHORT-NAME>SWC_PA</SHORT-NAME>
+                                                                        <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Demo/SwComponentTypes/PSWC</TYPE-TREF>
+                                                                </SW-COMPONENT-PROTOTYPE>
+                                                                <SW-COMPONENT-PROTOTYPE>
+                                                                        <SHORT-NAME>SWC_PB</SHORT-NAME>
+                                                                        <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Demo/SwComponentTypes/PSWC</TYPE-TREF>
+                                                                </SW-COMPONENT-PROTOTYPE>
+                                                        </COMPONENTS>
+                                                        <CONNECTORS>
+                                                                <ASSEMBLY-SW-CONNECTOR>
+                                                                        <SHORT-NAME>SWC_PA_EP_SWC_A_EP</SHORT-NAME>
+                                                                        <PROVIDER-IREF>
+                                                                                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_PA</CONTEXT-COMPONENT-REF>
+                                                                                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Demo/SwComponentTypes/PSWC/EP</TARGET-P-PORT-REF>
+                                                                        </PROVIDER-IREF>
+                                                                        <REQUESTER-IREF>
+                                                                                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_A</CONTEXT-COMPONENT-REF>
+                                                                                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC/EP</TARGET-R-PORT-REF>
+                                                                        </REQUESTER-IREF>
+                                                                </ASSEMBLY-SW-CONNECTOR>
+                                                                <ASSEMBLY-SW-CONNECTOR>
+                                                                        <SHORT-NAME>SWC_PB_EP_SWC_B_EP</SHORT-NAME>
+                                                                        <PROVIDER-IREF>
+                                                                                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_PB</CONTEXT-COMPONENT-REF>
+                                                                                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Demo/SwComponentTypes/PSWC/EP</TARGET-P-PORT-REF>
+                                                                        </PROVIDER-IREF>
+                                                                        <REQUESTER-IREF>
+                                                                                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_B</CONTEXT-COMPONENT-REF>
+                                                                                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC/EP</TARGET-R-PORT-REF>
+                                                                        </REQUESTER-IREF>
+                                                                </ASSEMBLY-SW-CONNECTOR>
+                                                        </CONNECTORS>
+                                                </COMPOSITION-SW-COMPONENT-TYPE>
+                                        </ELEMENTS>
+                                </AR-PACKAGE>
+                                <AR-PACKAGE>
+                                        <SHORT-NAME>Systems</SHORT-NAME>
+                                        <ELEMENTS>
+                                                <SYSTEM>
+                                                        <SHORT-NAME>Sys</SHORT-NAME>
+                                                        <CATEGORY>ECU_EXTRACT</CATEGORY>
+                                                        <ROOT-SOFTWARE-COMPOSITIONS>
+                                                                <ROOT-SW-COMPOSITION-PROTOTYPE>
+                                                                        <SHORT-NAME>RootSwComp</SHORT-NAME>
+                                                                        <FLAT-MAP-REF DEST="FLAT-MAP">/Demo/FlatMaps/SysFlatMap</FLAT-MAP-REF>
+                                                                        <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/Demo/SwComponentTypes/RootComp</SOFTWARE-COMPOSITION-TREF>
+                                                                </ROOT-SW-COMPOSITION-PROTOTYPE>
+                                                        </ROOT-SOFTWARE-COMPOSITIONS>
+                                                </SYSTEM>
+                                        </ELEMENTS>
+                                </AR-PACKAGE>
+                                <AR-PACKAGE>
+                                        <SHORT-NAME>FlatMaps</SHORT-NAME>
+                                        <ELEMENTS>
+                                                <FLAT-MAP>
+                                                        <SHORT-NAME>SysFlatMap</SHORT-NAME>
+                                                        <INSTANCES>
+                                                                <FLAT-INSTANCE-DESCRIPTOR>
+                                                                        <SHORT-NAME>SWC_A_PIP_Z0</SHORT-NAME>
+                                                                        <ECU-EXTRACT-REFERENCE-IREF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Demo/Systems/Sys/RootSwComp</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_A</CONTEXT-ELEMENT-REF>
+                                                                                <TARGET-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/SwComponentTypes/ASWC/ASWC/PIP</TARGET-REF>
+                                                                        </ECU-EXTRACT-REFERENCE-IREF>
+                                                                        <VARIATION-POINT>
+                                                                                <POST-BUILD-VARIANT-CONDITIONS>
+                                                                                        <POST-BUILD-VARIANT-CONDITION>
+                                                                                                <MATCHING-CRITERION-REF DEST="POST-BUILD-VARIANT-CRITERION">/Demo/PostBuildVariantCriterions/Z</MATCHING-CRITERION-REF>
+                                                                                                <VALUE>0</VALUE>
+                                                                                        </POST-BUILD-VARIANT-CONDITION>
+                                                                                </POST-BUILD-VARIANT-CONDITIONS>
+                                                                        </VARIATION-POINT>
+                                                                </FLAT-INSTANCE-DESCRIPTOR>
+                                                                <FLAT-INSTANCE-DESCRIPTOR>
+                                                                        <SHORT-NAME>SWC_A_PIP_Z1</SHORT-NAME>
+                                                                        <ECU-EXTRACT-REFERENCE-IREF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Demo/Systems/Sys/RootSwComp</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_A</CONTEXT-ELEMENT-REF>
+                                                                                <TARGET-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/SwComponentTypes/ASWC/ASWC/PIP</TARGET-REF>
+                                                                        </ECU-EXTRACT-REFERENCE-IREF>
+                                                                        <VARIATION-POINT>
+                                                                                <POST-BUILD-VARIANT-CONDITIONS>
+                                                                                        <POST-BUILD-VARIANT-CONDITION>
+                                                                                                <MATCHING-CRITERION-REF DEST="POST-BUILD-VARIANT-CRITERION">/Demo/PostBuildVariantCriterions/Z</MATCHING-CRITERION-REF>
+                                                                                                <VALUE>1</VALUE>
+                                                                                        </POST-BUILD-VARIANT-CONDITION>
+                                                                                </POST-BUILD-VARIANT-CONDITIONS>
+                                                                        </VARIATION-POINT>
+                                                                </FLAT-INSTANCE-DESCRIPTOR>
+                                                                <FLAT-INSTANCE-DESCRIPTOR>
+                                                                        <SHORT-NAME>SWC_B_PIP</SHORT-NAME>
+                                                                        <ECU-EXTRACT-REFERENCE-IREF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Demo/Systems/Sys/RootSwComp</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_B</CONTEXT-ELEMENT-REF>
+                                                                                <TARGET-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/SwComponentTypes/ASWC/ASWC/PIP</TARGET-REF>
+                                                                        </ECU-EXTRACT-REFERENCE-IREF>
+                                                                </FLAT-INSTANCE-DESCRIPTOR>
+                                                                <FLAT-INSTANCE-DESCRIPTOR>
+                                                                        <SHORT-NAME>SWC_A_SWC_B_SP_Z0</SHORT-NAME>
+                                                                        <ECU-EXTRACT-REFERENCE-IREF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Demo/Systems/Sys/RootSwComp</CONTEXT-ELEMENT-REF>
+                                                                                <!-- points to SWC_A but applies also for SWC_B due to sharedParameter behavior -->
+                                                                                <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_A</CONTEXT-ELEMENT-REF>
+                                                                                <TARGET-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/SwComponentTypes/ASWC/ASWC/SP</TARGET-REF>
+                                                                        </ECU-EXTRACT-REFERENCE-IREF>
+                                                                        <VARIATION-POINT>
+                                                                                <POST-BUILD-VARIANT-CONDITIONS>
+                                                                                        <POST-BUILD-VARIANT-CONDITION>
+                                                                                                <MATCHING-CRITERION-REF DEST="POST-BUILD-VARIANT-CRITERION">/Demo/PostBuildVariantCriterions/Z</MATCHING-CRITERION-REF>
+                                                                                                <VALUE>0</VALUE>
+                                                                                        </POST-BUILD-VARIANT-CONDITION>
+                                                                                </POST-BUILD-VARIANT-CONDITIONS>
+                                                                        </VARIATION-POINT>
+                                                                </FLAT-INSTANCE-DESCRIPTOR>
+                                                                <FLAT-INSTANCE-DESCRIPTOR>
+                                                                        <SHORT-NAME>SWC_A_SWC_B_SP_Z1</SHORT-NAME>
+                                                                        <ECU-EXTRACT-REFERENCE-IREF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Demo/Systems/Sys/RootSwComp</CONTEXT-ELEMENT-REF>
+                                                                                <!-- points to SWC_A but applies also for SWC_B due to sharedParameter behavior -->
+                                                                                <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_A</CONTEXT-ELEMENT-REF>
+                                                                                <TARGET-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/SwComponentTypes/ASWC/ASWC/SP</TARGET-REF>
+                                                                        </ECU-EXTRACT-REFERENCE-IREF>
+                                                                        <VARIATION-POINT>
+                                                                                <POST-BUILD-VARIANT-CONDITIONS>
+                                                                                        <POST-BUILD-VARIANT-CONDITION>
+                                                                                                <MATCHING-CRITERION-REF DEST="POST-BUILD-VARIANT-CRITERION">/Demo/PostBuildVariantCriterions/Z</MATCHING-CRITERION-REF>
+                                                                                                <VALUE>1</VALUE>
+                                                                                        </POST-BUILD-VARIANT-CONDITION>
+                                                                                </POST-BUILD-VARIANT-CONDITIONS>
+                                                                        </VARIATION-POINT>
+                                                                </FLAT-INSTANCE-DESCRIPTOR>
+                                                                <FLAT-INSTANCE-DESCRIPTOR>
+                                                                        <SHORT-NAME>SWC_PA_EP_Prm1_Z0</SHORT-NAME>
+                                                                        <ECU-EXTRACT-REFERENCE-IREF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Demo/Systems/Sys/RootSwComp</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_PA</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/Demo/SwComponentTypes/PSWC/EP</CONTEXT-ELEMENT-REF>
+                                                                                <TARGET-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/PortInterfaces/EP/Prm1</TARGET-REF>
+                                                                        </ECU-EXTRACT-REFERENCE-IREF>
+                                                                        <VARIATION-POINT>
+                                                                                <POST-BUILD-VARIANT-CONDITIONS>
+                                                                                        <POST-BUILD-VARIANT-CONDITION>
+                                                                                                <MATCHING-CRITERION-REF DEST="POST-BUILD-VARIANT-CRITERION">/Demo/PostBuildVariantCriterions/Z</MATCHING-CRITERION-REF>
+                                                                                                <VALUE>0</VALUE>
+                                                                                        </POST-BUILD-VARIANT-CONDITION>
+                                                                                </POST-BUILD-VARIANT-CONDITIONS>
+                                                                        </VARIATION-POINT>
+                                                                </FLAT-INSTANCE-DESCRIPTOR>
+                                                                <FLAT-INSTANCE-DESCRIPTOR>
+                                                                        <SHORT-NAME>SWC_PA_EP_Prm1_Z1</SHORT-NAME>
+                                                                        <ECU-EXTRACT-REFERENCE-IREF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Demo/Systems/Sys/RootSwComp</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_PA</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/Demo/SwComponentTypes/PSWC/EP</CONTEXT-ELEMENT-REF>
+                                                                                <TARGET-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/PortInterfaces/EP/Prm1</TARGET-REF>
+                                                                        </ECU-EXTRACT-REFERENCE-IREF>
+                                                                        <VARIATION-POINT>
+                                                                                <POST-BUILD-VARIANT-CONDITIONS>
+                                                                                        <POST-BUILD-VARIANT-CONDITION>
+                                                                                                <MATCHING-CRITERION-REF DEST="POST-BUILD-VARIANT-CRITERION">/Demo/PostBuildVariantCriterions/Z</MATCHING-CRITERION-REF>
+                                                                                                <VALUE>1</VALUE>
+                                                                                        </POST-BUILD-VARIANT-CONDITION>
+                                                                                </POST-BUILD-VARIANT-CONDITIONS>
+                                                                        </VARIATION-POINT>
+                                                                </FLAT-INSTANCE-DESCRIPTOR>
+                                                                <FLAT-INSTANCE-DESCRIPTOR>
+                                                                        <SHORT-NAME>SWC_PB_EP_Prm1</SHORT-NAME>
+                                                                        <ECU-EXTRACT-REFERENCE-IREF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Demo/Systems/Sys/RootSwComp</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/RootComp/SWC_PB</CONTEXT-ELEMENT-REF>
+                                                                                <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/Demo/SwComponentTypes/PSWC/EP</CONTEXT-ELEMENT-REF>
+                                                                                <TARGET-REF DEST="PARAMETER-DATA-PROTOTYPE">/Demo/PortInterfaces/EP/Prm1</TARGET-REF>
+                                                                        </ECU-EXTRACT-REFERENCE-IREF>
+                                                                </FLAT-INSTANCE-DESCRIPTOR>
+                                                        </INSTANCES>
+                                                </FLAT-MAP>
+                                        </ELEMENTS>
+                                </AR-PACKAGE>
+                                <AR-PACKAGE>
+                                        <SHORT-NAME>PostBuildVariantCriterions</SHORT-NAME>
+                                        <ELEMENTS>
+                                                <POST-BUILD-VARIANT-CRITERION>
+                                                        <SHORT-NAME>Z</SHORT-NAME>
+                                                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_AISpecification/CompuMethods/TrsmTyp1</COMPU-METHOD-REF>
+                                                </POST-BUILD-VARIANT-CRITERION>
+                                        </ELEMENTS>
+                                </AR-PACKAGE>
+                        </AR-PACKAGES>
+                </AR-PACKAGE>
+        </AR-PACKAGES>
+</AUTOSAR>

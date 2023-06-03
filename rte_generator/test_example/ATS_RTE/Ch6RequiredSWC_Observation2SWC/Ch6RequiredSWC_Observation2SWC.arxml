@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model CarLightsInfo_AppSWC
+Model version                : 2.39
+Simulink Coder version       : Simulink Coder 9.8 (R2022b) 13-May-2022
+XML source code generated on : Thu May 11 16:26:00 2023
+Model Checksum               : 678512225 2255946568 3928405569 4208942643
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>Observation2SWC_Config</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>Types</SHORT-NAME>
+                    <AR-PACKAGES>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>BaseTypes</SHORT-NAME>
+                            <ELEMENTS>
+                                <SW-BASE-TYPE>
+                                    <SHORT-NAME>uint8</SHORT-NAME>
+                                    <CATEGORY>FIXED_LENGTH</CATEGORY>
+                                    <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                                    <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                                    <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
+                                </SW-BASE-TYPE>
+                            </ELEMENTS> 
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                            <ELEMENTS>
+                                <IMPLEMENTATION-DATA-TYPE>
+                                    <SHORT-NAME>TYP_ExchangedData</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/Observation2SWC_Config/Types/BaseTypes/uint8</BASE-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </IMPLEMENTATION-DATA-TYPE>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+                            <ELEMENTS>
+                                <SW-ADDR-METHOD>
+                                    <SHORT-NAME>CODE</SHORT-NAME>
+                                    <SECTION-TYPE>CODE</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                                <SW-ADDR-METHOD>
+                                    <SHORT-NAME>CONST</SHORT-NAME>
+                                    <SECTION-TYPE>CONST</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                                <SW-ADDR-METHOD>
+                                    <SHORT-NAME>VAR</SHORT-NAME>
+                                    <SECTION-TYPE>VAR</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>Units</SHORT-NAME>
+                            <ELEMENTS>
+                                <UNIT>
+                                    <SHORT-NAME>NoUnit</SHORT-NAME>
+                                    <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+                                    <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+                                </UNIT>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                    </AR-PACKAGES>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                   <SHORT-NAME>Interfaces</SHORT-NAME> 
+                    <ELEMENTS>
+                        <SENDER-RECEIVER-INTERFACE>
+                            <SHORT-NAME>IF_ExchangedData</SHORT-NAME>
+                            <IS-SERVICE>false</IS-SERVICE>
+                            <DATA-ELEMENTS>
+                                <VARIABLE-DATA-PROTOTYPE>
+                                    <SHORT-NAME>DE_ExchangedData</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Observation2SWC_Config/Types/ImplementationDataTypes/TYP_ExchangedData</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE>
+                                    <SHORT-NAME>DE_ExchangedEvent</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>QUEUED</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/Observation2SWC_Config/Types/ImplementationDataTypes/TYP_ExchangedData</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                            </DATA-ELEMENTS>
+                        </SENDER-RECEIVER-INTERFACE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE>
+                    <SHORT-NAME>SWCs</SHORT-NAME>
+                    <ELEMENTS>
+                        <APPLICATION-SW-COMPONENT-TYPE>
+                            <SHORT-NAME>Observation2SWC</SHORT-NAME>
+                            <PORTS>
+                                <R-PORT-PROTOTYPE>
+                                    <SHORT-NAME>RP_ReceiveData2</SHORT-NAME>
+                                    <REQUIRED-COM-SPECS>
+                                        <NONQUEUED-RECEIVER-COM-SPEC>
+                                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Observation2SWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedData</DATA-ELEMENT-REF>
+                                            <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                            <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                            <INIT-VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>Value_Init_Send</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                            </INIT-VALUE>
+                                        </NONQUEUED-RECEIVER-COM-SPEC>
+                                    </REQUIRED-COM-SPECS>
+                                    <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Observation2SWC_Config/Interfaces/IF_ExchangedData</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                            </PORTS>
+                            <INTERNAL-BEHAVIORS>
+                                <SWC-INTERNAL-BEHAVIOR>
+                                    <SHORT-NAME>Observation2SWC_IB</SHORT-NAME>
+                                    <EVENTS>
+                                        <TIMING-EVENT>
+                                            <SHORT-NAME>Ev_Ti_RUN_Obs2_1</SHORT-NAME>
+                                            <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Observation2SWC_Config/SWCs/Observation2SWC/Observation2SWC_IB/RUN_Obs2_1</START-ON-EVENT-REF>
+                                            <PERIOD>0.01</PERIOD>
+                                        </TIMING-EVENT>
+                                        <TIMING-EVENT>
+                                            <SHORT-NAME>Ev_Ti_RUN_Obs2_2</SHORT-NAME>
+                                            <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Observation2SWC_Config/SWCs/Observation2SWC/Observation2SWC_IB/RUN_Obs2_2</START-ON-EVENT-REF>
+                                            <PERIOD>0.01</PERIOD>
+                                        </TIMING-EVENT>
+                                    </EVENTS>
+                                    <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                                    <RUNNABLES>
+                                        <RUNNABLE-ENTITY>
+                                            <SHORT-NAME>RUN_Obs2_1</SHORT-NAME>
+                                            <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                            <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                            <DATA-READ-ACCESSS>
+                                                <VARIABLE-ACCESS>
+                                                    <SHORT-NAME>VDP_ImplRead2_1</SHORT-NAME>
+                                                    <ACCESSED-VARIABLE>
+                                                        <AUTOSAR-VARIABLE-IREF>
+                                                            <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Observation2SWC_Config/SWCs/Observation2SWC/RP_ReceiveData2</PORT-PROTOTYPE-REF>
+                                                            <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Observation2SWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedData</TARGET-DATA-PROTOTYPE-REF>
+                                                        </AUTOSAR-VARIABLE-IREF>
+                                                    </ACCESSED-VARIABLE>
+                                                </VARIABLE-ACCESS>
+                                            </DATA-READ-ACCESSS>
+                                            <!--> 不能同時對同一個 DataPrototype Implicit &Explicit access </-->
+                                            <!--DATA-RECEIVE-POINT-BY-VALUES>
+                                                <VARIABLE-ACCESS>
+                                                    <SHORT-NAME>VDP_ExplRead2_1</SHORT-NAME>
+                                                    <ACCESSED-VARIABLE>
+                                                        <AUTOSAR-VARIABLE-IREF>
+                                                            <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Observation2SWC_Config/SWCs/Observation2SWC/RP_ReceiveData2</PORT-PROTOTYPE-REF>
+                                                            <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Observation2SWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedData</TARGET-DATA-PROTOTYPE-REF>
+                                                        </AUTOSAR-VARIABLE-IREF>
+                                                    </ACCESSED-VARIABLE>
+                                                </VARIABLE-ACCESS>
+                                            </DATA-RECEIVE-POINT-BY-VALUES-->
+                                            <SYMBOL>RUN_Obs2_1</SYMBOL>
+                                        </RUNNABLE-ENTITY>
+                                        <RUNNABLE-ENTITY>
+                                            <SHORT-NAME>RUN_Obs2_2</SHORT-NAME>
+                                            <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                            <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                            <DATA-READ-ACCESSS>
+                                                <VARIABLE-ACCESS>
+                                                    <SHORT-NAME>VDP_ImplRead2_2</SHORT-NAME>
+                                                    <ACCESSED-VARIABLE>
+                                                        <AUTOSAR-VARIABLE-IREF>
+                                                            <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Observation2SWC_Config/SWCs/Observation2SWC/RP_ReceiveData2</PORT-PROTOTYPE-REF>
+                                                            <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Observation2SWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedData</TARGET-DATA-PROTOTYPE-REF>
+                                                        </AUTOSAR-VARIABLE-IREF>
+                                                    </ACCESSED-VARIABLE>
+                                                </VARIABLE-ACCESS>
+                                            </DATA-READ-ACCESSS>
+                                            <SYMBOL>RUN_Obs2_2</SYMBOL>
+                                        </RUNNABLE-ENTITY>
+                                    </RUNNABLES>
+                                    <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                                </SWC-INTERNAL-BEHAVIOR>
+                            </INTERNAL-BEHAVIORS>
+                        </APPLICATION-SW-COMPONENT-TYPE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

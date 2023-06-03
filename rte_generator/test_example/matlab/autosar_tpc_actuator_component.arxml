@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model autosar_tpc_actuator
+Model version                : 6.0
+Simulink Coder version       : Simulink Coder 9.8 (R2022b) 13-May-2022
+XML source code generated on : Fri Nov 25 16:33:46 2022
+Model Checksum               : 294797025 2252284234 3727976417 3885705006
+-->
+<!--./test_example/matlab/autosar_tpc_actuator_component.arxml-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-1.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>TPC_Composition</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>Components</SHORT-NAME>
+                    <ELEMENTS>
+                        <SENSOR-ACTUATOR-SW-COMPONENT-TYPE UUID="d8f58559-733f-5c45-4134-93997075d68c">
+                            <SHORT-NAME>Actuator</SHORT-NAME>
+                            <PORTS>
+                                <R-PORT-PROTOTYPE UUID="6423b2b7-cf37-57ad-9e5f-801d0e077305">
+                                    <SHORT-NAME>ThrCmd_Percent</SHORT-NAME>
+                                    <REQUIRED-COM-SPECS>
+                                        <NONQUEUED-RECEIVER-COM-SPEC>
+                                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/TPC_Composition/Interfaces/ThrCmd_Percent/Value</DATA-ELEMENT-REF>
+                                            <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                            <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                            <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                            <ENABLE-UPDATE>false</ENABLE-UPDATE>
+                                            <HANDLE-NEVER-RECEIVED>false</HANDLE-NEVER-RECEIVED>
+                                            <HANDLE-TIMEOUT-TYPE>NONE</HANDLE-TIMEOUT-TYPE>
+                                            <INIT-VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>DefaultInitValue_Float</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                            </INIT-VALUE>
+                                        </NONQUEUED-RECEIVER-COM-SPEC>
+                                    </REQUIRED-COM-SPECS>
+                                    <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/TPC_Composition/Interfaces/ThrCmd_Percent</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="80d6fd4f-f21d-5a39-3720-a03aa3043dc4">
+                                    <SHORT-NAME>ThrCmd_HwIO</SHORT-NAME>
+                                    <PROVIDED-COM-SPECS>
+                                        <NONQUEUED-SENDER-COM-SPEC>
+                                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/TPC_Composition/Interfaces/ThrCmd_HwIO/Value</DATA-ELEMENT-REF>
+                                            <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                            <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                            <INIT-VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>DefaultInitValue_SInt16</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                            </INIT-VALUE>
+                                        </NONQUEUED-SENDER-COM-SPEC>
+                                    </PROVIDED-COM-SPECS>
+                                    <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/TPC_Composition/Interfaces/ThrCmd_HwIO</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                            </PORTS>
+                            <INTERNAL-BEHAVIORS>
+                                <SWC-INTERNAL-BEHAVIOR UUID="de5e5f82-b5f3-51e2-b36e-b7c099e4acb1">
+                                    <SHORT-NAME>Actuator_IB</SHORT-NAME>
+                                    <DATA-TYPE-MAPPING-REFS>
+                                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/TPC_Composition/DataTypes/DataTypeMappings/ActuatorDataTypeMappingsSet</DATA-TYPE-MAPPING-REF>
+                                    </DATA-TYPE-MAPPING-REFS>
+                                    <EVENTS>
+                                        <TIMING-EVENT UUID="18c2c975-c3d6-5612-b48f-8ad4b88e04b1">
+                                            <SHORT-NAME>Event_Actuator_Step</SHORT-NAME>
+                                            <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/TPC_Composition/Components/Actuator/Actuator_IB/Actuator_Step</START-ON-EVENT-REF>
+                                            <PERIOD>0.005</PERIOD>
+                                        </TIMING-EVENT>
+                                    </EVENTS>
+                                    <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                                    <RUNNABLES>
+                                        <RUNNABLE-ENTITY UUID="25c2501a-499a-5e54-9134-536a4b6b69be">
+                                            <SHORT-NAME>Actuator_Init</SHORT-NAME>
+                                            <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                            <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                            <SYMBOL>Actuator_Init</SYMBOL>
+                                        </RUNNABLE-ENTITY>
+                                        <RUNNABLE-ENTITY UUID="c18d5144-4a7a-5d5a-009b-ecf00f3ed7e9">
+                                            <SHORT-NAME>Actuator_Step</SHORT-NAME>
+                                            <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                            <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                            <DATA-READ-ACCESSS>
+                                                <VARIABLE-ACCESS UUID="f3008c22-bfa9-5a2f-c2ce-ce5f244a5bfe">
+                                                    <SHORT-NAME>IN_ThrCmd_Percent_Value</SHORT-NAME>
+                                                    <ACCESSED-VARIABLE>
+                                                        <AUTOSAR-VARIABLE-IREF>
+                                                            <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/TPC_Composition/Components/Actuator/ThrCmd_Percent</PORT-PROTOTYPE-REF>
+                                                            <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/TPC_Composition/Interfaces/ThrCmd_Percent/Value</TARGET-DATA-PROTOTYPE-REF>
+                                                        </AUTOSAR-VARIABLE-IREF>
+                                                    </ACCESSED-VARIABLE>
+                                                </VARIABLE-ACCESS>
+                                            </DATA-READ-ACCESSS>
+                                            <DATA-WRITE-ACCESSS>
+                                                <VARIABLE-ACCESS UUID="a7342a8c-69b8-5961-bc0a-d44369adc847">
+                                                    <SHORT-NAME>OUT_ThrCmd_HwIO_Value</SHORT-NAME>
+                                                    <ACCESSED-VARIABLE>
+                                                        <AUTOSAR-VARIABLE-IREF>
+                                                            <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/TPC_Composition/Components/Actuator/ThrCmd_HwIO</PORT-PROTOTYPE-REF>
+                                                            <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/TPC_Composition/Interfaces/ThrCmd_HwIO/Value</TARGET-DATA-PROTOTYPE-REF>
+                                                        </AUTOSAR-VARIABLE-IREF>
+                                                    </ACCESSED-VARIABLE>
+                                                </VARIABLE-ACCESS>
+                                            </DATA-WRITE-ACCESSS>
+                                            <PARAMETER-ACCESSS>
+                                                <PARAMETER-ACCESS UUID="0c698a56-5570-5d86-eb8a-84c22c9bed8b">
+                                                    <SHORT-NAME>SCALPRM_HBridgeCmd_LkupTbl</SHORT-NAME>
+                                                    <ACCESSED-PARAMETER>
+                                                        <LOCAL-PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/TPC_Composition/Components/Actuator/Actuator_IB/HBridgeCmd_LkupTbl</LOCAL-PARAMETER-REF>
+                                                    </ACCESSED-PARAMETER>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <SW-CALPRM-AXIS-SET>
+                                                                    <SW-CALPRM-AXIS>
+                                                                        <SW-AXIS-INDEX>1</SW-AXIS-INDEX>
+                                                                        <SW-AXIS-INDIVIDUAL>
+                                                                            <SW-VARIABLE-REFS>
+                                                                                <AUTOSAR-VARIABLE>
+                                                                                    <AUTOSAR-VARIABLE-IREF>
+                                                                                        <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/TPC_Composition/Components/Actuator/ThrCmd_Percent</PORT-PROTOTYPE-REF>
+                                                                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/TPC_Composition/Interfaces/ThrCmd_Percent/Value</TARGET-DATA-PROTOTYPE-REF>
+                                                                                    </AUTOSAR-VARIABLE-IREF>
+                                                                                </AUTOSAR-VARIABLE>
+                                                                            </SW-VARIABLE-REFS>
+                                                                        </SW-AXIS-INDIVIDUAL>
+                                                                    </SW-CALPRM-AXIS>
+                                                                </SW-CALPRM-AXIS-SET>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                </PARAMETER-ACCESS>
+                                            </PARAMETER-ACCESSS>
+                                            <SYMBOL>Actuator_Step</SYMBOL>
+                                        </RUNNABLE-ENTITY>
+                                    </RUNNABLES>
+                                    <SHARED-PARAMETERS>
+                                        <PARAMETER-DATA-PROTOTYPE UUID="b88259fd-6683-5efa-28c0-ff89f72453ae">
+                                            <SHORT-NAME>HBridgeCmd_LkupTbl</SHORT-NAME>
+                                            <CATEGORY>CURVE</CATEGORY>
+                                            <SW-DATA-DEF-PROPS>
+                                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                </SW-DATA-DEF-PROPS-VARIANTS>
+                                            </SW-DATA-DEF-PROPS>
+                                            <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/TPC_Composition/DataTypes/ApplDataTypes/Appl_HBridgeCmd_LkupTbl</TYPE-TREF>
+                                            <INIT-VALUE>
+                                                <CONSTANT-REFERENCE>
+                                                    <SHORT-LABEL>HBridgeCmd_LkupTbl</SHORT-LABEL>
+                                                    <CONSTANT-REF DEST="CONSTANT-SPECIFICATION">/TPC_Composition/DataTypes/Constants/HBridgeCmd_LkupTbl</CONSTANT-REF>
+                                                </CONSTANT-REFERENCE>
+                                            </INIT-VALUE>
+                                        </PARAMETER-DATA-PROTOTYPE>
+                                    </SHARED-PARAMETERS>
+                                    <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                                </SWC-INTERNAL-BEHAVIOR>
+                            </INTERNAL-BEHAVIORS>
+                        </SENSOR-ACTUATOR-SW-COMPONENT-TYPE>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

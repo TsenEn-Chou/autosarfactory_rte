@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Auto generated XML Component Description for model CarLightsInfo_AppSWC
+Model version                : 2.39
+Simulink Coder version       : Simulink Coder 9.8 (R2022b) 13-May-2022
+XML source code generated on : Thu May 11 16:26:00 2023
+Model Checksum               : 678512225 2255946568 3928405569 4208942643
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>ControlSWC_Config</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>Types</SHORT-NAME>
+                    <AR-PACKAGES>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>BaseTypes</SHORT-NAME>
+                            <ELEMENTS>
+                                <SW-BASE-TYPE>
+                                    <SHORT-NAME>uint8</SHORT-NAME>
+                                    <CATEGORY>FIXED_LENGTH</CATEGORY>
+                                    <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+                                    <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                                    <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
+                                </SW-BASE-TYPE>
+                                <SW-BASE-TYPE>
+                                    <SHORT-NAME>uint16</SHORT-NAME>
+                                    <CATEGORY>FIXED_LENGTH</CATEGORY>
+                                    <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+                                    <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+                                    <NATIVE-DECLARATION>uint16</NATIVE-DECLARATION>
+                                </SW-BASE-TYPE>
+                            </ELEMENTS> 
+                        </AR-PACKAGE>
+                        <AR-PACKAGE>
+                            <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+                            <ELEMENTS>
+                                <IMPLEMENTATION-DATA-TYPE>
+                                    <SHORT-NAME>TYP_ExchangedData8</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ControlSWC_Config/Types/BaseTypes/uint8</BASE-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </IMPLEMENTATION-DATA-TYPE>
+                                <IMPLEMENTATION-DATA-TYPE>
+                                    <SHORT-NAME>TYP_ExchangedData16</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/ControlSWC_Config/Types/BaseTypes/uint16</BASE-TYPE-REF>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </IMPLEMENTATION-DATA-TYPE>
+                            </ELEMENTS>
+                        </AR-PACKAGE>
+                        <!--AR-PACKAGE>
+                            <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+                            <ELEMENTS>
+                                <SW-ADDR-METHOD>
+                                    <SHORT-NAME>CODE</SHORT-NAME>
+                                    <SECTION-TYPE>CODE</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                                <SW-ADDR-METHOD>
+                                    <SHORT-NAME>CONST</SHORT-NAME>
+                                    <SECTION-TYPE>CONST</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                                <SW-ADDR-METHOD>
+                                    <SHORT-NAME>VAR</SHORT-NAME>
+                                    <SECTION-TYPE>VAR</SECTION-TYPE>
+                                </SW-ADDR-METHOD>
+                            </ELEMENTS>
+                        </AR-PACKAGE-->
+                        <!--AR-PACKAGE>
+                            <SHORT-NAME>Units</SHORT-NAME>
+                            <ELEMENTS>
+                                <UNIT>
+                                    <SHORT-NAME>NoUnit</SHORT-NAME>
+                                    <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+                                    <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+                                </UNIT>
+                            </ELEMENTS>
+                        </AR-PACKAGE-->
+                    </AR-PACKAGES>
+                </AR-PACKAGE>
+                <!--AR-PACKAGE>
+                   <SHORT-NAME>Interfaces</SHORT-NAME> 
+                    <ELEMENTS>
+                        <SENDER-RECEIVER-INTERFACE>
+                            <SHORT-NAME>IF_ExchangedData</SHORT-NAME>
+                            <IS-SERVICE>false</IS-SERVICE>
+                            <DATA-ELEMENTS>
+                                <VARIABLE-DATA-PROTOTYPE>
+                                    <SHORT-NAME>DE_ExchangedData</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ControlSWC_Config/Types/ImplementationDataTypes/TYP_ExchangedData</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                                <VARIABLE-DATA-PROTOTYPE>
+                                    <SHORT-NAME>DE_ExchangedEvent</SHORT-NAME>
+                                    <CATEGORY>VALUE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                                                <SW-IMPL-POLICY>QUEUED</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                    <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/ControlSWC_Config/Types/ImplementationDataTypes/TYP_ExchangedData</TYPE-TREF>
+                                </VARIABLE-DATA-PROTOTYPE>
+                            </DATA-ELEMENTS>
+                        </SENDER-RECEIVER-INTERFACE>
+                    </ELEMENTS>
+                </AR-PACKAGE-->
+                <!--AR-PACKAGE>
+                    <SHORT-NAME>SWCs</SHORT-NAME>
+                    <ELEMENTS>
+                        <APPLICATION-SW-COMPONENT-TYPE>
+                            <SHORT-NAME>ControlSWC</SHORT-NAME>
+                            <PORTS>
+                                <P-PORT-PROTOTYPE>
+                                    <SHORT-NAME>PP_SendData</SHORT-NAME>
+                                    <PROVIDED-COM-SPECS>
+                                        <NONQUEUED-SENDER-COM-SPEC>
+                                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/ControlSWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedData</DATA-ELEMENT-REF>
+                                            <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                            <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                            <INIT-VALUE>
+                                                <NUMERICAL-VALUE-SPECIFICATION>
+                                                    <SHORT-LABEL>Value_Init_Send</SHORT-LABEL>
+                                                    <VALUE>0</VALUE>
+                                                </NUMERICAL-VALUE-SPECIFICATION>
+                                            </INIT-VALUE>
+                                        </NONQUEUED-SENDER-COM-SPEC>
+                                    </PROVIDED-COM-SPECS>
+                                    <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ControlSWC_Config/Interfaces/IF_ExchangedData</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE>
+                                    <SHORT-NAME>PP_SendEvent</SHORT-NAME>
+                                    <PROVIDED-COM-SPECS>
+                                        <QUEUED-SENDER-COM-SPEC>
+                                            <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/ControlSWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedEvent</DATA-ELEMENT-REF>
+                                            <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                                            <USES-END-TO-END-PROTECTION>false</USES-END-TO-END-PROTECTION>
+                                        </QUEUED-SENDER-COM-SPEC>
+                                    </PROVIDED-COM-SPECS>
+                                    <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/ControlSWC_Config/Interfaces/IF_ExchangedData</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                            </PORTS>
+                            <INTERNAL-BEHAVIORS>
+                                <SWC-INTERNAL-BEHAVIOR>
+                                    <SHORT-NAME>ControlSWC_IB</SHORT-NAME>
+                                    <EVENTS>
+                                        <TIMING-EVENT>
+                                            <SHORT-NAME>Ev_Ti_RUN_Ctrl</SHORT-NAME>
+                                            <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ControlSWC_Config/SWCs/ControlSWC/ControlSWC_IB/RUN_Ctrl</START-ON-EVENT-REF>
+                                            <PERIOD>0.005</PERIOD>
+                                        </TIMING-EVENT>
+                                    </EVENTS>
+                                    <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                                    <RUNNABLES>
+                                        <RUNNABLE-ENTITY>
+                                            <SHORT-NAME>RUN_Ctrl</SHORT-NAME>
+                                            <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                                            <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                                            <DATA-SEND-POINTS>
+                                                <VARIABLE-ACCESS>
+                                                    <SHORT-NAME>VDP_ExplWrite</SHORT-NAME>
+                                                    <ACCESSED-VARIABLE>
+                                                        <AUTOSAR-VARIABLE-IREF>
+                                                            <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ControlSWC_Config/SWCs/ControlSWC/PP_SendData</PORT-PROTOTYPE-REF>
+                                                            <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ControlSWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedData</TARGET-DATA-PROTOTYPE-REF>
+                                                        </AUTOSAR-VARIABLE-IREF>
+                                                    </ACCESSED-VARIABLE>
+                                                </VARIABLE-ACCESS>
+                                                <VARIABLE-ACCESS>
+                                                    <SHORT-NAME>VDP_Send</SHORT-NAME>
+                                                    <ACCESSED-VARIABLE>
+                                                        <AUTOSAR-VARIABLE-IREF>
+                                                            <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ControlSWC_Config/SWCs/ControlSWC/PP_SendEvent</PORT-PROTOTYPE-REF>
+                                                            <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ControlSWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedEvent</TARGET-DATA-PROTOTYPE-REF>
+                                                        </AUTOSAR-VARIABLE-IREF>
+                                                    </ACCESSED-VARIABLE>
+                                                </VARIABLE-ACCESS>
+                                            </DATA-SEND-POINTS>
+                                            <DATA-WRITE-ACCESSS>
+                                                <VARIABLE-ACCESS>
+                                                    <SHORT-NAME>VDP_ImplWrite</SHORT-NAME>
+                                                    <ACCESSED-VARIABLE>
+                                                        <AUTOSAR-VARIABLE-IREF>
+                                                            <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ControlSWC_Config/SWCs/ControlSWC/PP_SendData</PORT-PROTOTYPE-REF>
+                                                            <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ControlSWC_Config/Interfaces/IF_ExchangedData/DE_ExchangedData</TARGET-DATA-PROTOTYPE-REF>
+                                                        </AUTOSAR-VARIABLE-IREF>
+                                                    </ACCESSED-VARIABLE>
+                                                </VARIABLE-ACCESS>
+                                            </DATA-WRITE-ACCESSS>
+                                            <SYMBOL>RUN_Ctrl</SYMBOL>
+                                        </RUNNABLE-ENTITY>
+                                    </RUNNABLES>
+                                    <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                                </SWC-INTERNAL-BEHAVIOR>
+                            </INTERNAL-BEHAVIORS>
+                        </APPLICATION-SW-COMPONENT-TYPE>
+                    </ELEMENTS>
+                </AR-PACKAGE-->
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

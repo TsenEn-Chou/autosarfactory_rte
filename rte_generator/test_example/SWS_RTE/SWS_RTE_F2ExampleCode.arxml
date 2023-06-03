@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-1.xsd">
+        <AR-PACKAGES>
+                <AR-PACKAGE>
+                        <SHORT-NAME>Demo</SHORT-NAME>
+                        <CATEGORY>EXAMPLE</CATEGORY>
+                        <AR-PACKAGES>
+                                <AR-PACKAGE>
+                                        <SHORT-NAME>SwComponentTypes</SHORT-NAME>
+                                        <ELEMENTS>
+                                                <COMPOSITION-SW-COMPONENT-TYPE>
+                                                        <SHORT-NAME>COMP_1</SHORT-NAME>
+                                                        <DESC>
+                                                                <L-2 L="EN">Stability need for received data (see SWS RTE)</L-2>
+                                                        </DESC>
+                                                        <CONSISTENCY-NEEDSS>
+                                                                <CONSISTENCY-NEEDS>
+                                                                        <SHORT-NAME>CN_BC</SHORT-NAME>
+                                                                        <DPG-DOES-NOT-REQUIRE-COHERENCYS>
+                                                                                <DATA-PROTOTYPE-GROUP>
+                                                                                        <SHORT-NAME>CN_BC_DG1</SHORT-NAME>
+                                                                                        <IMPLICIT-DATA-ACCESS-IREFS>
+                                                                                                <IMPLICIT-DATA-ACCESS-IREF>
+                                                                                                        <CONTEXT-SW-COMPONENT-PROTOTYPE-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/COMP_1/ASWC_B</CONTEXT-SW-COMPONENT-PROTOTYPE-REF>
+                                                                                                        <CONTEXT-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_B/A</CONTEXT-PORT-PROTOTYPE-REF>
+                                                                                                        <TARGET-VARIABLE-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/A/A</TARGET-VARIABLE-DATA-PROTOTYPE-REF>
+                                                                                                </IMPLICIT-DATA-ACCESS-IREF>
+                                                                                                 <IMPLICIT-DATA-ACCESS-IREF>
+                                                                                                        <CONTEXT-SW-COMPONENT-PROTOTYPE-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/COMP_1/ASWC_B</CONTEXT-SW-COMPONENT-PROTOTYPE-REF>
+                                                                                                        <CONTEXT-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_B/B</CONTEXT-PORT-PROTOTYPE-REF>
+                                                                                                        <TARGET-VARIABLE-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/B/B</TARGET-VARIABLE-DATA-PROTOTYPE-REF>
+                                                                                                </IMPLICIT-DATA-ACCESS-IREF>
+                                                                                                <IMPLICIT-DATA-ACCESS-IREF>
+                                                                                                        <CONTEXT-SW-COMPONENT-PROTOTYPE-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/COMP_1/ASWC_C</CONTEXT-SW-COMPONENT-PROTOTYPE-REF>
+                                                                                                        <CONTEXT-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_C/A</CONTEXT-PORT-PROTOTYPE-REF>
+                                                                                                        <TARGET-VARIABLE-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/A/A</TARGET-VARIABLE-DATA-PROTOTYPE-REF>
+                                                                                                </IMPLICIT-DATA-ACCESS-IREF> 
+                                                                                                <IMPLICIT-DATA-ACCESS-IREF>
+                                                                                                        <CONTEXT-SW-COMPONENT-PROTOTYPE-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/COMP_1/ASWC_C</CONTEXT-SW-COMPONENT-PROTOTYPE-REF>
+                                                                                                        <CONTEXT-PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_C/B</CONTEXT-PORT-PROTOTYPE-REF>
+                                                                                                        <TARGET-VARIABLE-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/B/B</TARGET-VARIABLE-DATA-PROTOTYPE-REF>
+                                                                                                </IMPLICIT-DATA-ACCESS-IREF>
+                                                                                        </IMPLICIT-DATA-ACCESS-IREFS>
+                                                                                </DATA-PROTOTYPE-GROUP>
+                                                                        </DPG-DOES-NOT-REQUIRE-COHERENCYS>
+                                                                        <REG-REQUIRES-STABILITYS>
+                                                                                <RUNNABLE-ENTITY-GROUP>
+                                                                                        <SHORT-NAME>CN_BC_RG1</SHORT-NAME>
+                                                                                        <RUNNABLE-ENTITY-IREFS>
+                                                                                                <RUNNABLE-ENTITY-IREF>
+                                                                                                        <CONTEXT-SW-COMPONENT-PROTOTYPE-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/COMP_1/ASWC_B</CONTEXT-SW-COMPONENT-PROTOTYPE-REF>
+                                                                                                        <TARGET-RUNNABLE-ENTITY-REF DEST="RUNNABLE-ENTITY">/Demo/SwComponentTypes/ASWC_B/IB_ASWC_B/ASWC_B_RUN1</TARGET-RUNNABLE-ENTITY-REF>
+                                                                                                </RUNNABLE-ENTITY-IREF>
+                                                                                                <RUNNABLE-ENTITY-IREF>
+                                                                                                        <CONTEXT-SW-COMPONENT-PROTOTYPE-REF DEST="SW-COMPONENT-PROTOTYPE">/Demo/SwComponentTypes/COMP_1/ASWC_C</CONTEXT-SW-COMPONENT-PROTOTYPE-REF>
+                                                                                                        <TARGET-RUNNABLE-ENTITY-REF DEST="RUNNABLE-ENTITY">/Demo/SwComponentTypes/ASWC_C/IB_ASWC_C/ASWC_C_RUN1</TARGET-RUNNABLE-ENTITY-REF>
+                                                                                                </RUNNABLE-ENTITY-IREF>
+                                                                                        </RUNNABLE-ENTITY-IREFS>
+                                                                                </RUNNABLE-ENTITY-GROUP>
+                                                                        </REG-REQUIRES-STABILITYS>
+                                                                </CONSISTENCY-NEEDS>
+                                                        </CONSISTENCY-NEEDSS>
+                                                        <COMPONENTS>
+                                                                <SW-COMPONENT-PROTOTYPE>
+                                                                        <SHORT-NAME>ASWC_A</SHORT-NAME>
+                                                                        <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Demo/SwComponentTypes/ASWC_A</TYPE-TREF>
+                                                                </SW-COMPONENT-PROTOTYPE>
+                                                                <SW-COMPONENT-PROTOTYPE>
+                                                                        <SHORT-NAME>ASWC_B</SHORT-NAME>
+                                                                        <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Demo/SwComponentTypes/ASWC_B</TYPE-TREF>
+                                                                </SW-COMPONENT-PROTOTYPE>
+                                                                <SW-COMPONENT-PROTOTYPE>
+                                                                        <SHORT-NAME>ASWC_C</SHORT-NAME>
+                                                                        <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Demo/SwComponentTypes/ASWC_C</TYPE-TREF>
+                                                                </SW-COMPONENT-PROTOTYPE>
+                                                        </COMPONENTS>
+                                                </COMPOSITION-SW-COMPONENT-TYPE>
+                                                <APPLICATION-SW-COMPONENT-TYPE>
+                                                        <SHORT-NAME>ASWC_A</SHORT-NAME>
+                                                        <PORTS>
+                                                                <P-PORT-PROTOTYPE>
+                                                                        <SHORT-NAME>A</SHORT-NAME>
+                                                                        <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Demo/PortInterfaces/A</PROVIDED-INTERFACE-TREF>
+                                                                </P-PORT-PROTOTYPE>
+                                                                <P-PORT-PROTOTYPE>
+                                                                        <SHORT-NAME>B</SHORT-NAME>
+                                                                        <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Demo/PortInterfaces/B</PROVIDED-INTERFACE-TREF>
+                                                                </P-PORT-PROTOTYPE>
+                                                        </PORTS>
+                                                        <INTERNAL-BEHAVIORS>
+                                                                <SWC-INTERNAL-BEHAVIOR>
+                                                                        <SHORT-NAME>IB_ASWC_A</SHORT-NAME>
+                                                                        <RUNNABLES>
+                                                                                <RUNNABLE-ENTITY>
+                                                                                        <SHORT-NAME>ASWC_A_RUN1</SHORT-NAME>
+                                                                                        <DATA-WRITE-ACCESSS>
+                                                                                                <VARIABLE-ACCESS>
+                                                                                                        <SHORT-NAME>DWP_ASWC_A_RUN1_A_A</SHORT-NAME>
+                                                                                                        <ACCESSED-VARIABLE>
+                                                                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                                                                        <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_A/A</PORT-PROTOTYPE-REF>
+                                                                                                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/A/A</TARGET-DATA-PROTOTYPE-REF>
+                                                                                                                </AUTOSAR-VARIABLE-IREF>
+                                                                                                        </ACCESSED-VARIABLE>
+                                                                                                </VARIABLE-ACCESS>
+                                                                                                <VARIABLE-ACCESS>
+                                                                                                        <SHORT-NAME>DWP_ASWC_A_RUN1_B_B</SHORT-NAME>
+                                                                                                        <ACCESSED-VARIABLE>
+                                                                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                                                                        <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_A/B</PORT-PROTOTYPE-REF>
+                                                                                                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/B/B</TARGET-DATA-PROTOTYPE-REF>
+                                                                                                                </AUTOSAR-VARIABLE-IREF>
+                                                                                                        </ACCESSED-VARIABLE>
+                                                                                                </VARIABLE-ACCESS>
+                                                                                        </DATA-WRITE-ACCESSS>
+                                                                                </RUNNABLE-ENTITY>
+                                                                        </RUNNABLES>
+                                                                </SWC-INTERNAL-BEHAVIOR>
+                                                        </INTERNAL-BEHAVIORS>
+                                                </APPLICATION-SW-COMPONENT-TYPE>
+                                                <APPLICATION-SW-COMPONENT-TYPE>
+                                                        <SHORT-NAME>ASWC_B</SHORT-NAME>
+                                                        <PORTS>
+                                                                <R-PORT-PROTOTYPE>
+                                                                        <SHORT-NAME>A</SHORT-NAME>
+                                                                        <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Demo/PortInterfaces/A</REQUIRED-INTERFACE-TREF>
+                                                                </R-PORT-PROTOTYPE>
+                                                                <R-PORT-PROTOTYPE>
+                                                                        <SHORT-NAME>B</SHORT-NAME>
+                                                                        <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Demo/PortInterfaces/B</REQUIRED-INTERFACE-TREF>
+                                                                </R-PORT-PROTOTYPE>
+                                                        </PORTS>
+                                                        <INTERNAL-BEHAVIORS>
+                                                                <SWC-INTERNAL-BEHAVIOR>
+                                                                        <SHORT-NAME>IB_ASWC_B</SHORT-NAME>
+                                                                        <RUNNABLES>
+                                                                                <RUNNABLE-ENTITY>
+                                                                                        <SHORT-NAME>ASWC_B_RUN1</SHORT-NAME>
+                                                                                        <DATA-READ-ACCESSS>
+                                                                                                <VARIABLE-ACCESS>
+                                                                                                        <SHORT-NAME>DWP_ASWC_B_RUN1_A_A</SHORT-NAME>
+                                                                                                        <ACCESSED-VARIABLE>
+                                                                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                                                                        <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_B/A</PORT-PROTOTYPE-REF>
+                                                                                                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/A/A</TARGET-DATA-PROTOTYPE-REF>
+                                                                                                                </AUTOSAR-VARIABLE-IREF>
+                                                                                                        </ACCESSED-VARIABLE>
+                                                                                                </VARIABLE-ACCESS>
+                                                                                                <VARIABLE-ACCESS>
+                                                                                                        <SHORT-NAME>DWP_ASWC_B_RUN1_B_B</SHORT-NAME>
+                                                                                                        <ACCESSED-VARIABLE>
+                                                                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                                                                        <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_B/B</PORT-PROTOTYPE-REF>
+                                                                                                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/B/B</TARGET-DATA-PROTOTYPE-REF>
+                                                                                                                </AUTOSAR-VARIABLE-IREF>
+                                                                                                        </ACCESSED-VARIABLE>
+                                                                                                </VARIABLE-ACCESS>
+                                                                                        </DATA-READ-ACCESSS>
+                                                                                </RUNNABLE-ENTITY>
+                                                                        </RUNNABLES>
+                                                                </SWC-INTERNAL-BEHAVIOR>
+                                                        </INTERNAL-BEHAVIORS>
+                                                </APPLICATION-SW-COMPONENT-TYPE>
+                                                <APPLICATION-SW-COMPONENT-TYPE>
+                                                        <SHORT-NAME>ASWC_C</SHORT-NAME>
+                                                        <PORTS>
+                                                                <R-PORT-PROTOTYPE>
+                                                                        <SHORT-NAME>A</SHORT-NAME>
+                                                                        <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Demo/PortInterfaces/A</REQUIRED-INTERFACE-TREF>
+                                                                </R-PORT-PROTOTYPE>
+                                                                <R-PORT-PROTOTYPE>
+                                                                        <SHORT-NAME>B</SHORT-NAME>
+                                                                        <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Demo/PortInterfaces/B</REQUIRED-INTERFACE-TREF>
+                                                                </R-PORT-PROTOTYPE>
+                                                        </PORTS>
+                                                        <INTERNAL-BEHAVIORS>
+                                                                <SWC-INTERNAL-BEHAVIOR>
+                                                                        <SHORT-NAME>IB_ASWC_C</SHORT-NAME>
+                                                                        <RUNNABLES>
+                                                                                <RUNNABLE-ENTITY>
+                                                                                        <SHORT-NAME>ASWC_C_RUN1</SHORT-NAME>
+                                                                                        <DATA-READ-ACCESSS>
+                                                                                                <VARIABLE-ACCESS>
+                                                                                                        <SHORT-NAME>DWP_ASWC_C_RUN1_A_A</SHORT-NAME>
+                                                                                                        <ACCESSED-VARIABLE>
+                                                                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                                                                        <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_C/A</PORT-PROTOTYPE-REF>
+                                                                                                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/A/A</TARGET-DATA-PROTOTYPE-REF>
+                                                                                                                </AUTOSAR-VARIABLE-IREF>
+                                                                                                        </ACCESSED-VARIABLE>
+                                                                                                </VARIABLE-ACCESS>
+                                                                                                <VARIABLE-ACCESS>
+                                                                                                        <SHORT-NAME>DWP_ASWC_C_RUN1_B_B</SHORT-NAME>
+                                                                                                        <ACCESSED-VARIABLE>
+                                                                                                                <AUTOSAR-VARIABLE-IREF>
+                                                                                                                        <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Demo/SwComponentTypes/ASWC_C/B</PORT-PROTOTYPE-REF>
+                                                                                                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Demo/PortInterfaces/B/B</TARGET-DATA-PROTOTYPE-REF>
+                                                                                                                </AUTOSAR-VARIABLE-IREF>
+                                                                                                        </ACCESSED-VARIABLE>
+                                                                                                </VARIABLE-ACCESS>
+                                                                                        </DATA-READ-ACCESSS>
+                                                                                </RUNNABLE-ENTITY>
+                                                                        </RUNNABLES>
+                                                                </SWC-INTERNAL-BEHAVIOR>
+                                                        </INTERNAL-BEHAVIORS>
+                                                </APPLICATION-SW-COMPONENT-TYPE>
+                                        </ELEMENTS>
+                                </AR-PACKAGE>
+                                <AR-PACKAGE>
+                                        <SHORT-NAME>PortInterfaces</SHORT-NAME>
+                                        <ELEMENTS>
+                                                <SENDER-RECEIVER-INTERFACE>
+                                                        <SHORT-NAME>A</SHORT-NAME>
+                                                        <DATA-ELEMENTS>
+                                                                <VARIABLE-DATA-PROTOTYPE>
+                                                                        <SHORT-NAME>A</SHORT-NAME>
+                                                                </VARIABLE-DATA-PROTOTYPE>
+                                                        </DATA-ELEMENTS>
+                                                </SENDER-RECEIVER-INTERFACE>
+                                                <SENDER-RECEIVER-INTERFACE>
+                                                        <SHORT-NAME>B</SHORT-NAME>
+                                                        <DATA-ELEMENTS>
+                                                                <VARIABLE-DATA-PROTOTYPE>
+                                                                        <SHORT-NAME>B</SHORT-NAME>
+                                                                </VARIABLE-DATA-PROTOTYPE>
+                                                        </DATA-ELEMENTS>
+                                                </SENDER-RECEIVER-INTERFACE>
+                                        </ELEMENTS>
+                                </AR-PACKAGE>
+                        </AR-PACKAGES>
+                </AR-PACKAGE>
+        </AR-PACKAGES>
+</AUTOSAR>

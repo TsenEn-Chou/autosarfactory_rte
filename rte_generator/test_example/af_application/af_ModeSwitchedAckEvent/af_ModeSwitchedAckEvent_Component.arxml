@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00049.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>af_EvMsa_Component</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>SwctAppModeMgr</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE>
+              <SHORT-NAME>PpAppMode</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/af_EvMsa_Interface/IfModeSwitch1</PROVIDED-INTERFACE-TREF>
+              <PROVIDED-COM-SPECS>
+                <MODE-SWITCH-SENDER-COM-SPEC/>
+              </PROVIDED-COM-SPECS>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>IbhSwctAppModeMgr</SHORT-NAME>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>ReModeSwitchMgr</SHORT-NAME>
+                  <MODE-SWITCH-POINTS>
+                    <MODE-SWITCH-POINT>
+                      <SHORT-NAME>ModeSwitchPoint_PpAppMode</SHORT-NAME>
+                      <MODE-GROUP-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/af_EvMsa_Component/SwctAppModeMgr/PpAppMode</CONTEXT-P-PORT-REF>
+                        <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/af_EvMsa_Interface/IfModeSwitch1/ECUMModePrototype1</TARGET-MODE-GROUP-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-SWITCH-POINT>
+                  </MODE-SWITCH-POINTS>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>ReModeSwitchComplete</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <EVENTS>
+                <MODE-SWITCHED-ACK-EVENT>
+                  <SHORT-NAME>EvMsaAppMode</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/af_EvMsa_Component/SwctAppModeMgr/IbhSwctAppModeMgr/ReModeSwitchComplete</START-ON-EVENT-REF>
+                  <EVENT-SOURCE-REF DEST="MODE-SWITCH-POINT">/af_EvMsa_Component/SwctAppModeMgr/IbhSwctAppModeMgr/ReModeSwitchMgr/ModeSwitchPoint_PpAppMode</EVENT-SOURCE-REF>
+                </MODE-SWITCHED-ACK-EVENT>
+              </EVENTS>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
